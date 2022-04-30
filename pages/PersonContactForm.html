@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/PersonContactForm.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Person Contact Form</title>
+</head>
+
+<body>
+    <!--Welcome To The AddressBook Web App-->
+    <!-- Create header -->
+    <div class="logo-content">
+        <img class="header-img" src="../assets/logo/contactBook.png" alt="contactBook" alt="" width="45px"
+            height="45px" />
+        <div class="header-text">
+            <span><a href="./PersonsHomePage.html">Contact</a></span>
+            <span>Book</span>
+        </div>
+    </div>
+    <div class="form-content">
+        <form onsubmit="save(event)" onreset="resetForm();">
+            <!--Create form header with name-->
+            <header class="form-head">
+                Person Address Form
+                <a href="../pages/PersonsHomePage.html">
+                    <span><img src="../assets/button/cancelButton.png" class="resetButton" />
+                    </span>
+                </a>
+            </header>
+            <div class="row-content">
+                <label for="fullName " class="label text">Full Name</label>
+                <input type="text" id="fullName" class="input" placeholder="Enter Your name..." required>
+                <error class="error" id="errorName"></error>
+            </div>
+            <div class="row-content">
+                <label for="phoneNumber" class="label text">Phone Number</label>
+                <div class="phNo">
+                    <select id="countryCode" name="countryCode" class="countryCode">
+                        <option value="+91">+91</option>
+                        <option value="+81">+81</option>
+                        <option value="044">+044</option>
+                        <option value="+23">+23</option>
+                        <option value="+80">+80</option>
+                        <option value="+32">+32</option>
+                    </select>
+                    <input type="number" class="input" name="phoneNumber" id="phoneNumber"
+                        placeholder="Enter Your Ph.No" required>
+                </div>
+                <error class="error" id="errorPhoneNumber"></error>
+            </div>
+            <div class="row-content">
+                <label for="Address" class="label text">Address</label>
+                <textarea type="text" id="address" class="input address" placeholder="Enter Your Address"
+                    required></textarea>
+                <error class="error" id="errorAddress"></error>
+            </div>
+            <!--Created city, state as select element and zipcode as input element-->
+            <div class="row-content">
+                <div id="citystatezip">
+                    <div class="column">
+                        <label for="Address" class="label text">City</label>
+                        <select name="city" id="city" class="text">
+                            <option value="Select City">Select city</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Lucknow">NaviMumbai</option>
+                            <option value="Lucknow">Noida</option>
+                            <option value="Lucknow">Bhopal</option>
+                        </select>
+                    </div>
+                    <div class="column ">
+                        <label for="state" class="label text">State</label>
+                        <select id="state" name="state" class="text">
+                            <option value="Select State">Select state</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label for="zip" class="label text" value="Zip Code">Enter Your Zipcode</label>
+                        <input type="text" id="zip" class="input zipcode" placeholder=" Zip Code" required>
+                        <error class="error" id="errorzipCode"></error>
+                    </div>
+                </div>
+            </div>
+            <div class="row-content">
+                <label for="emailId" class="label text">Email Id</label>
+                <textarea type="text" id="emailId" class="input emailId" placeholder="Enter Your email"
+                    required></textarea>
+                <error class="error" id="errorEmail"></error>
+            </div>
+            <div class="submit-reset buttonparent">
+                <button type="submit" class="button submitButton">Add</button>
+                <button type="reset" class="button">Reset</button>
+            </div>
+        </form>
+    </div>
+    <!-- Adding script file -->
+    <script src="../js/PersonRegister.js"></script>
+    <script src="../js/PersonRegisterData.js"></script>
+    <script src="../Js/SiteProperty.js"></script>
+</body>
+
+</html>

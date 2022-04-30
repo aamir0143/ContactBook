@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/PersonsHomePage.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Contact Book</title>
+</head>
+
+<body>
+    <!--Creating header for Home Page-->
+    <div class="logo-content">
+        <img src="../assets/logo/contactBook.png" alt="" width="45px" height="45px" />
+        <div class="header-text">
+            <span>Contact</span>
+            <span>Book</span>
+        </div>
+    </div>
+    <!--Creating a header section with addressbook details and add person button-->
+    <div class="main-content">
+        <div class="inner-header-content">
+            <span class="emp-detail-text">Person Details</span>
+            <a href="../pages/PersonContactForm.html" class="add-button">
+                <img src="../assets/button/add-24px.svg" alt="Add Button" class="icons">Add Person
+            </a>
+        </div>
+        <!--Creating tabular format for persons details-->
+        <div class="table-main">
+            <table class="table" id="display-table">
+            </table>
+        </div>
+    </div>
+
+    <!--Adding javascript files-->
+    <script src="../js/SiteProperty.js"></script>
+    <script src="../Js/PersonsHomePage.js"></script>
+</body>
+
+</html>

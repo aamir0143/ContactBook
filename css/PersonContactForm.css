@@ -1,0 +1,552 @@
+/* Defined css for addressbook header */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    margin-left: 5%;
+    padding: 15px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    font: normal normal bold 20px/25px Roboto;
+    text-transform: uppercase;
+    margin-left: 3%;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    font: normal normal bold 20px/25px Roboto;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: #008CFF;
+    line-height: 20px;
+}
+
+.header-text span:nth-child(2) {
+    color: #42515F;
+}
+
+.header-text span:nth-child(1) {
+    color: #008CFF;
+}
+
+.header-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    justify-content: start;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px)
+    }
+}
+
+.header-img:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+
+/*Defined css for form and its field */
+
+.form-content {
+    min-height: calc(100%-100px);
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid #008CFF;
+}
+
+form {
+    width: 65%;
+    background: #ffffff;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #f5f5f5;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+form:hover {
+    box-shadow: 0px 0px 15px #111;
+    transform: scale(1.01);
+    transition-duration: 0.5s;
+}
+
+.form-head {
+    padding: 20px;
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #008CFF;
+    margin-bottom: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 1;
+    text-align: center;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto 15px auto;
+    padding: 0px 60px;
+    font: normal normal 600 15px/24px Roboto;
+    color: #42515F;
+}
+
+label {
+    padding: 10 0px;
+    margin-bottom: 5px;
+}
+
+label:hover {
+    color: #008CFF;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 8px;
+    outline: none;
+    resize: vertical;
+    color: #42515f;
+}
+
+::placeholder {
+    color: rgb(216, 216, 216);
+    opacity: 1;
+    font-family: Roboto;
+}
+
+.input:focus {
+    border: 1px solid #008CFF;
+}
+
+.input:focus::placeholder {
+    color: rgb(169, 169, 169);
+    opacity: 1;
+    font-family: Roboto;
+}
+
+.address {
+    height: 100px;
+}
+
+.text {
+    font-size: 16px;
+    color: #42515f;
+    font: normal normal 600 15px/24px Roboto;
+}
+
+.column>select {
+    width: 250px;
+    height: 40px;
+    border-radius: px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.column>select:focus {
+    border: 1px solid #008CFF;
+}
+
+#citystatezip {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.column>.zipcode {
+    height: 40px;
+    padding-left: 5px;
+    width: 250px;
+}
+
+span>img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
+}
+
+.phNo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.phNo>select:focus {
+    border: 1px solid #008CFF;
+}
+
+select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 15px;
+    font: normal normal bold 16px Roboto;
+    color: #42515f;
+    background-color: transparent;
+    min-width: 100px;
+    outline: none;
+    margin-right: 15px;
+}
+
+.buttonparent {
+    display: flex;
+    flex-flow: row;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    font-size: 14px;
+    font-family: Roboto;
+    color: #42515F;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    border: none;
+    font-weight: 500;
+    min-width: 140px;
+    padding: 8px 8px;
+    cursor: pointer;
+    border: 1px solid #707070;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 15px #008CFF;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    border: none;
+    background-color: #008CFF;
+    color: white;
+}
+
+.submit-reset>button[type="submit"]:hover {
+    background-color: #008CFF;
+    color: white;
+    border: 1px solid #969696;
+}
+
+.submit-reset>button[type="reset"]:hover,
+.resetButton>button:hover {
+    box-shadow: 0px 0px 15px #707070;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    border: none;
+    background-color: #969696;
+    color: white;
+}
+
+.resetButton:hover {
+    box-shadow: 0px 0px 15px #111;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.error {
+    margin-left: 10px;
+    font-size: 12px;
+    font: Robot;
+    color: red;
+}
+
+
+/* Define the css for media query */
+
+@media only screen and (max-width:600px) {
+    #citystatezip {
+        margin: 5%;
+        flex-direction: column;
+        flex-flow: wrap;
+    }
+
+    .column {
+        margin-bottom: 10px;
+    }
+
+    .header-img {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .row-content {
+        min-width: 60px;
+        padding: 12px 12px 12px 12px;
+        display: inline-block;
+        margin-bottom: -20px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .buttonparent {
+        flex-direction: column;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button>button {
+        margin: 5px;
+    }
+
+    .button {
+        margin: 5px;
+        padding: 8px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .column>select {
+        width: 200px;
+        height: 40px;
+        border-radius: px;
+        padding: 5px;
+        margin-right: 15px;
+    }
+
+    .column>.zipcode {
+        width: 200px;
+        height: 40px;
+        padding-left: 5px;
+    }
+
+    .countryCode {
+        width: 15%;
+        height: 40px;
+    }
+
+    .form-head {
+        font-size: 13px;
+        padding: 10px;
+        font: Roboto;
+        margin-bottom: -2px;
+        font-weight: bold;
+    }
+
+    .phNo>.countryCode {
+        min-width: 65px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:1336px) {
+    #citystatezip {
+        margin: 5%;
+        flex-direction: column;
+        flex-flow: wrap;
+    }
+
+    .column {
+        margin-bottom: 10px;
+    }
+
+    .header-img {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .row-content {
+        display: flex;
+        flex-direction: column;
+        margin: 15px auto 15px auto;
+        padding: 0px 60px;
+        font: normal normal 600 15px/24px Roboto;
+        color: #42515F;
+    }
+
+    .address {
+        width: 100%;
+    }
+
+    .buttonparent {
+        margin-top: -10px;
+    }
+
+    .column>select {
+        width: 200px;
+        height: 40px;
+        border-radius: px;
+        padding: 5px;
+        margin-right: 15px;
+    }
+
+    .column>.zipcode {
+        width: 200px;
+        height: 40px;
+        padding-left: 5px;
+    }
+
+    .countryCode {
+        width: 15%;
+        height: 40px;
+    }
+
+    .form-head {
+        font-size: 13px;
+        padding: 10px;
+        font: Roboto;
+        margin-bottom: -2px;
+        font-weight: bold;
+    }
+
+    .phNo>.countryCode {
+        min-width: 65px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    #citystatezip {
+        margin: 5%;
+        flex-direction: column;
+        flex-flow: wrap;
+    }
+
+    .column {
+        margin-bottom: 10px;
+    }
+
+    .header-img {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .row-content {
+        min-width: 60px;
+        padding: 12px 12px 12px 12px;
+        display: inline-block;
+        margin-bottom: -20px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .buttonparent {
+        flex-direction: column;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button>button {
+        margin: 5px;
+    }
+
+    .button {
+        margin: 5px;
+        padding: 8px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .column>select {
+        width: 200px;
+        height: 40px;
+        border-radius: px;
+        padding: 5px;
+        margin-right: 15px;
+    }
+
+    .column>.zipcode {
+        width: 200px;
+        height: 40px;
+        padding-left: 5px;
+    }
+
+    .countryCode {
+        width: 15%;
+        height: 40px;
+    }
+
+    .form-head {
+        font-size: 13px;
+        padding: 10px;
+        font: Roboto;
+        margin-bottom: -2px;
+        font-weight: bold;
+    }
+
+    .phNo>.countryCode {
+        min-width: 65px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+}
